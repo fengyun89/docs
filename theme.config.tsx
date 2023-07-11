@@ -5,7 +5,7 @@ const config: DocsThemeConfig = {
   head: <link rel="icon" href="https://avatars.githubusercontent.com/u/5600837" type="image/x-icon"/>,
   useNextSeoProps() {
     return {
-      titleTemplate: '%s – Coding Freedom',
+      titleTemplate: '%s – 程序员的圆',
     }
   },
   logo: <img style={{height: '48px'}} src="https://avatars.githubusercontent.com/u/5600837" />,
@@ -17,7 +17,7 @@ const config: DocsThemeConfig = {
     link: 'https://space.bilibili.com/388036379',
   },
   footer: {
-    text: '© Coding Freedom',
+    text: '© 程序员的圆',
   },
   docsRepositoryBase: 'https://github.com/coding-freedom/docs/tree/main',
   editLink: {
