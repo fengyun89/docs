@@ -1,3 +1,17 @@
 {
-  "statements": "语句"
+  "structure": "程序结构",
+  "lexical": "词法",
+  "operators": "操作符",
+  "expressions": "表达式",
+  "statements": "语句",
+  "data-types": "数据类型",
+  "arrays": "数组",
+  "functions": "函数",
+  "classes": "类",
+  "modules": "模块",
+  "iterators": "迭代器",
+  "generators": "生成器",
+  "meta-programming": "元编程",
+  "asynchronous": "异步",
+  "promises": "Promise"
 }
