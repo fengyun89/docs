@@ -1,8 +1,27 @@
 {
   "index": "Home",
-  "--": {
+  "框架": {
+    "type": "separator",
+    "title": "框架"
+  },
+  "Next.js": "Next.js",
+  "Jetpack-Compose": "Jetpack Compose",
+  "SwiftUI": "SwiftUI",
+  "Spring": "Spring",
+  "编程语言": {
     "type": "separator",
     "title": "编程语言"
   },
-  "JavaScript": "JavaScript"
+  "JavaScript": "JavaScript",
+  "TypeScript": "TypeScript",
+  "Kotlin": "Kotlin",
+  "Swift": "Swift",
+  "C": "C",
+  "C++": "C++",
+  "基础": {
+    "type": "separator",
+    "title": "基础"
+  },
+  "algorithms": "数据结构与算法",
+  "design-patterns": "设计模式"
 }

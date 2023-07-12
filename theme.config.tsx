@@ -8,6 +8,9 @@ const config: DocsThemeConfig = {
       titleTemplate: '%s – 程序员的圆',
     }
   },
+  sidebar: {
+    defaultMenuCollapseLevel: 1,
+  },
   logo: <img style={{height: '48px'}} src="https://avatars.githubusercontent.com/u/5600837" />,
   project: {
     link: 'https://github.com/coding-freedom',
