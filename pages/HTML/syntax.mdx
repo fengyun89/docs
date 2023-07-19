@@ -1,0 +1,133 @@
+import { Callout } from 'nextra/components'
+
+# HTML 语法
+
+## HTML 文档
+
+<Callout emoji>
+1. 可选的 [byte-order mark (BOM)](#byte-order-mark-bom) 字符
+2. 后跟任意数量的[注释](#注释)和 [ASCII 空白](#ascii-空白)
+3. 后跟 [DOCTYPE 声明](#doctype-声明)
+4. 后跟任意数量的注释和 ASCII 空白
+5. 后跟文档[元素](#元素)
+6. 后跟任意数量的注释和空白
+</Callout>
+
+## DOCTYPE 声明
+
+<Callout emoji>
+1. 以大小写不敏感的字符串`<!DOCTYPE`开头
+2. 后跟一到多个 ASCII 空白
+3. 后跟大小写不敏感的字符串`html`
+4. 后跟可选的[legacy-compat](#legacy-compat)
+5. 后跟任意数量的空白
+6. 后跟字符`>`
+</Callout>
+
+```html
+<!DOCTYPE html>
+```
+
+### legacy-compat
+
+<Callout emoji>
+1. 一到多个 ASCII 空白
+2. 后跟大小写不敏感的字符串`SYSTEM`
+3. 后跟一到多个 ASCII 空白
+4. 后跟单引号或双引号
+5. 后跟大小写不敏感的字符串`about:legacy-compat`
+6. 后跟与4匹配的单引号或双引号
+</Callout>
+
+`legacy-compat` 是 HTML5 中的一种模式，指定浏览器在渲染页面时使用向后兼容的 HTML4 渲染模式，以保证页面能够在老旧的浏览器中正确显示。
+
+```html
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<!DOCTYPE html SYSTEM 'about:legacy-compat'>
+```
+
+## 元素
+
+### 开始标签
+
+<Callout emoji>
+1. 以`<`开头
+2. 后跟元素的标签名，大小写不敏感
+3. 如果后面有属性，则后跟一到多个 ASCII 空白，属性之间用一到多个 ASCII 空白分隔
+4. 后跟任意数量的 ASCII 空白
+5. 如果是空元素，可以后跟`/`
+6. 后跟`>`
+</Callout>
+
+### 结束标签
+
+<Callout emoji>
+1. 以`</`开头
+2. 后跟元素的标签名，大小写不敏感
+3. 后跟任意数量的 ASCII 空白
+4. 后跟`>`
+</Callout>
+
+### 属性
+
+属性可以通过四种不同的方式指定
+
+**1.空属性**
+
+只有属性名。
+
+**2.不带引号的属性值**
+
+属性值如果没有 ASCII 空白，可以不用引号包裹。
+
+属性名和属性值用`=`分隔，`=`两边可以有任意数量的 ASCII 空白。
+
+**3.单引号的属性值**
+
+属性值用单引号包裹，属性值不能再包含单引号。
+
+**4.双引号的属性值**
+
+属性值用双引号包裹，属性值不能再包含双引号。
+
+### 嵌套
+
+元素可以嵌套。
+
+## 注释
+
+<Callout emoji>
+1. 以`<!--`开头
+2. 后跟可选的文本，不能以`>`、`->`开头，不能以`<!-`结尾，不能包含`<!--`、`-->`、`--!>`
+3. 后跟`-->`
+</Callout>
+
+## CDATA
+
+<Callout emoji>
+1. 大小写不敏感的字符串`<![CDATA[`
+2. 后跟可选的文本，文本不能包含`]]>`
+3. 后跟字符串`]]>`
+</Callout>
+
+在 HTML DOM 中，`<![CDATA[ ]]>` 也被解析为注释节点。
+
+## ASCII 空白
+
+<Callout emoji>
+* U+0009 TAB水平制表符
+* U+000A LF换行符
+* U+000C FF分页符
+* U+000D CR回车符
+* U+0020 SPACE空格
+</Callout>
+
+## 大小写
+
+在 HTML 中，标签名、属性名不区分大小写。
+
+属性值通常区分大小写，但也有例外，比如`<input type="text">`中的`text`可以是大写也可以是小写。
+
+在 XHTML 中，标签名、属性名、属性值都是区分大小写的。
+
+## byte-order mark (BOM)
