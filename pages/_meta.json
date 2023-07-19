@@ -8,9 +8,9 @@
   "Jetpack-Compose": "Jetpack Compose",
   "SwiftUI": "SwiftUI",
   "Spring": "Spring",
-  "编程语言": {
+  "语言": {
     "type": "separator",
-    "title": "编程语言"
+    "title": "语言"
   },
   "HTML": "HTML",
   "JavaScript": "JavaScript",
